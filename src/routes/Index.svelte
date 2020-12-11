@@ -53,8 +53,8 @@
 <Layout>
 	<!-- <Router>
 		<Link to="/instructions"><span class="w-10 h-10 absolute top-0 left-0"></span></Link>
-	</Router> -->
-	<!-- <img class="h-60 w-auto mt-5 rounded-3xl bg-gradient-to-b from-red to-black" src="https://t3.ftcdn.net/jpg/02/81/69/20/360_F_281692077_vntiPFFtvpENtzNUQH4nr4U48ydg5fPr.jpg" alt="AI">
+	</Router>
+	<img class="h-60 w-auto mt-5 rounded-3xl bg-gradient-to-b from-red to-black" src="https://t3.ftcdn.net/jpg/02/81/69/20/360_F_281692077_vntiPFFtvpENtzNUQH4nr4U48ydg5fPr.jpg" alt="AI">
 	<div class="w-72 text-center relative bottom-12">
 		<h1 class="w-64 mx-auto text-2xl font-light mt-3">Nao knows <span class="font-bold">EVERYTHING</span></h1>
 		<p class="mt-3 font-light">Nao won't answer any questions and misbehave until you implore him! Try saying <span class="font-bold">`now nao is getting my answer`</span>.</p>
@@ -70,7 +70,7 @@
 		<div class="my-5 border border-white py-5 px-5 rounded-lg font-medium text-xl">
 			<p class="break-words">{displayAnswer}</p>
 		</div>
-		{/if} -->
+		{/if}
+	</div> -->
 		<p>Check back soon... it needs some debugging!</p>
-</div>
 </Layout>
