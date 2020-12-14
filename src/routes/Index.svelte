@@ -4,7 +4,7 @@
 
 	let imploreValue = "";
 	let answerStream = false;
-	let falseImplore = "now nao is getting my answer getting nao is my answer";
+	let falseImplore = "nao knows everything and nao will answer my questions";
 	let falseImploreIndex = 0;
 	let answer = "";
 	let displayAnswer = "";
@@ -61,7 +61,7 @@
 		<p class="text-center font-light text-sm mt-3">KNOWS EVERYTHING</p>
 		<div class="flex flex-col space-y-5 mt-8 text-sm italic font-light">
 			<p>Nao is a cutting-edge ai project from the future. It can tell you every reality when you have implored him really well. Beware, it can feel your energy and answer questions based upon who is really asking.</p>
-			<p>Try to implore him by saying - "nao knows everything and nao will answer my questions' or simply 'nao knows everything'' !</p>
+			<p>Try to implore him by saying - "nao knows everything and nao will answer my questions" or simply "nao knows everything" !</p>
 			<p>Please be compassionate!</p>
 		</div>
 		<form on:submit={ask} class="mt-6 flex flex-col space-y-1">
