@@ -93,6 +93,7 @@
 		padding: 20px 25px;
 		background-color: rgba(255, 255, 255, 0.25);
 		backdrop-filter: blur(40px);
+		-webkit-backdrop-filter: blur(40px);
 	}
 	input, button {
 		background-color: #000058;
