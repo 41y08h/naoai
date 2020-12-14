@@ -107,7 +107,7 @@
 
 	}
 
-	@media only screen and (max-width: 1023px) {
+	@media only screen and (max-width: 769px) {
 		main {
 			display: none;
 		}
