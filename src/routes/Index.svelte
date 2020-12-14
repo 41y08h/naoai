@@ -2,7 +2,6 @@
 	import { Router, Link} from "svelte-routing";
 	import Layout from "../Layout.svelte";
 
-	document.body.className = "bg-gray-900 text-white"
 	let imploreValue = "";
 	let answerStream = false;
 	let falseImplore = "now nao is getting my answer getting nao is my answer";
@@ -51,26 +50,68 @@
 	}	
 </script>
 <Layout>
-	<!-- <Router>
+	<Router>
 		<Link to="/instructions"><span class="w-10 h-10 absolute top-0 left-0"></span></Link>
-	</Router>
-	<img class="h-60 w-auto mt-5 rounded-3xl bg-gradient-to-b from-red to-black" src="https://t3.ftcdn.net/jpg/02/81/69/20/360_F_281692077_vntiPFFtvpENtzNUQH4nr4U48ydg5fPr.jpg" alt="AI">
-	<div class="w-72 text-center relative bottom-12">
-		<h1 class="w-64 mx-auto text-2xl font-light mt-3">Nao knows <span class="font-bold">EVERYTHING</span></h1>
-		<p class="mt-3 font-light">Nao won't answer any questions and misbehave until you implore him! Try saying <span class="font-bold">`now nao is getting my answer`</span>.</p>
-		<form on:submit={ask}>
-			<input on:input={imploreInput} value={imploreValue} class="w-full mt-4 p-1 px-3 rounded-lg bg-black text-white focus:outline-none focus:outline-white" type="text" placeholder="Implore">
-			<input class="w-full mt-1 p-1 px-3 rounded-lg bg-black text-white focus:outline-none" type="text" placeholder="Question">
-			<div class="flex mt-4 overflow-hidden rounded-xl">
-				<button type="submit" class="w-full font-light p-4 py-3 bg-red-800 text-white focus:outline-none">Ask</button>
-				<button type="reset" on:click={reset} class="w-full font-light p-4 py-3 bg-black text-white focus:outline-none">Reset</button>
-			</div>
-		</form>
-		{#if displayAnswer}
-		<div class="my-5 border border-white py-5 px-5 rounded-lg font-medium text-xl">
-			<p class="break-words">{displayAnswer}</p>
+	</Router>	
+	<main class="m-auto text-white rounded-lg">
+		<div class="flex items-center space-x-4 justify-center">
+			<img src="/logo.svg" alt="nao logo">
+			<h1 class="text-2xl font-bold">Nao</h1>
 		</div>
-		{/if}
-	</div> -->
-		<p>Check back soon... it needs some debugging!</p>
+		<p class="text-center font-light text-sm mt-3">KNOWS EVERYTHING</p>
+		<div class="flex flex-col space-y-5 mt-8 text-sm italic font-light">
+			<p>Nao is a cutting-edge ai project from the future. It can tell you every reality when you have implored him really well. Beware, it can feel your energy and answer questions based upon who is really asking.</p>
+			<p>Try to implore him by saying - "nao knows everything and nao will answer my questions' or simply 'nao knows everything'' !</p>
+			<p>Please be compassionate!</p>
+		</div>
+		<form on:submit={ask} class="mt-6 flex flex-col space-y-1">
+			<input value={imploreValue} on:input={imploreInput} type="text" class="font-light italic rounded-lg w-full p-4 py-2" placeholder="Implore"> 
+			<input type="text" class="font-light italic rounded-lg w-full p-4 py-2" placeholder="Question">
+			<div class="flex">
+				<button type="submit" class="w-full py-2 font-light italic rounded-lg rounded-r-none">Ask</button>
+				<button type="reset" on:click={reset} class="w-full py-2 font-light italic  rounded-lg rounded-l-none">Reset</button>
+			</div>
+			{#if displayAnswer}
+			<p class="p-2 py-4 result text-center italic ">
+				{displayAnswer}
+			</p>
+			{/if}
+		</form>
+	</main>
+	<p class="font-bold text-3xl m-auto text-white device-error">Sorry for inconvenience but this is intended to be used on a laptop or PC.</p>
 </Layout>
+
+<style>
+	:global(body) {
+		background: url('/ai.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	main {
+		width: 500px;
+		padding: 20px 25px;
+		background-color: rgba(255, 255, 255, 0.25);
+		backdrop-filter: blur(40px);
+	}
+	input, button {
+		background-color: #000058;
+		outline: none;
+	}
+	.device-error {
+		background-color: rgba(255, 255, 255, 0.25);
+		backdrop-filter: blur(40px);
+		padding: 20px 25px;
+		display: none;
+
+	}
+
+	@media only screen and (max-width: 1023px) {
+		main {
+			display: none;
+		}
+		.device-error {
+			display: block;
+		}
+	}
+</style>

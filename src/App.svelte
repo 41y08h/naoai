@@ -8,3 +8,10 @@
 	<Route path="/" component={Index} />
 	<Route path="/instructions" component={Instructions} />	
 </Router>
+
+
+<style>
+	:global(body) {
+		font-family: "Inter", sans-serif !important;
+	}
+</style>
